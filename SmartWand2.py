@@ -266,7 +266,7 @@ def call_st(cmd_list):
     arg_proc.add_argument('--publicip', dest='public_ip', help='Public IP of this computer', default=None)
     arg_proc.add_argument('commands', nargs='*', help='The following commands are supported:\nquery DEVICE_TYPE all\nquery DEVICE_TYPE DEVICE_NAME\nset DEVICE_TYPE DEVICE_NAME COMMAND')
     options = arg_proc.parse_args()
-    print(options)
+    #print(options)
     return_code = 0
 
     log_level = logging.INFO

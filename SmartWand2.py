@@ -1,13 +1,8 @@
-# /etc/init.d/SmartWand2.py
-### BEGIN INIT INFO
-# Provides:          sample.py
-# Required-Start:    $remote_fs $syslog
-# Required-Stop:     $remote_fs $syslog
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: Start daemon at boot time
-# Description:       Enable service provided by daemon.
-### END INIT INFO
+#!/usr/bin/env python3
+# This code was hacked together by Mike Spielman - maspieljr@gmail.com
+# Significant leverage from the following two repos:
+#    https://github.com/rllynch/smartthings_cli
+#    https://github.com/GammaGames/kano-wand-demos
 
 #Wand Module Imports
 from kano_wand.kano_wand import Shop, Wand, PATTERN
@@ -85,7 +80,19 @@ class GestureWand(Wand):
             print("{}: {}".format(gesture, self.spell))
 
 
-
+""" SmartThings CLI
+Copyright 2015 Richard L. Lynch <rich@richlynch.com>
+Description: Control SmartThings devices from the command line.
+Dependencies: twisted, requests, future
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at:
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+"""
 
 #SmartThings Module classes and definitions
 class OAuthHandler(resource.Resource):

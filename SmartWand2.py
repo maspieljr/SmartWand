@@ -1,4 +1,4 @@
-# /etc/init.d/sample.py
+# /etc/init.d/SmartWand2.py
 ### BEGIN INIT INFO
 # Provides:          sample.py
 # Required-Start:    $remote_fs $syslog
